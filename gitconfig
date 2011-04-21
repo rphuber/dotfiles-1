@@ -1,0 +1,11 @@
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	st = status
+	ci = commit
+	ps = push
+[user]
+	name = Jeff Dickey
+	email = dickeytk@gmail.com
