@@ -6,6 +6,8 @@
 	st = status
 	ci = commit
 	ps = push
+	pl = pull
+	sm = submodule
 [user]
 	name = Jeff Dickey
 	email = dickeytk@gmail.com
