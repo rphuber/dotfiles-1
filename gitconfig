@@ -12,3 +12,8 @@
 [user]
 	name = Jeff Dickey
 	email = dickeytk@gmail.com
+[sendemail]
+    smtpencryption = tls
+    smtpserver = smtp.gmail.com
+    smtpuser = dickeytk@gmail.com
+    smtpserverport = 587
