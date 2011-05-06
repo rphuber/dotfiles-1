@@ -1,17 +1,17 @@
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+    diff = auto
+    status = auto
+    branch = auto
 [alias]
-	st = status
-	ci = commit
-	co = checkout
-	ps = push
-	pl = pull
-	sm = submodule
+    st = status
+    ci = commit
+    co = checkout
+    ps = push
+    pl = pull
+    sm = submodule
 [user]
-	name = Jeff Dickey
-	email = dickeytk@gmail.com
+    name = Jeff Dickey
+    email = dickeytk@gmail.com
 [sendemail]
     smtpencryption = tls
     smtpserver = smtp.gmail.com
