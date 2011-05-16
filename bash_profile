@@ -5,3 +5,4 @@ alias ll='ls -lGF'
 alias l='ls -GF'
 [[ -s "/Users/dickey/.rvm/scripts/rvm" ]] && source "/Users/dickey/.rvm/scripts/rvm"
 source ~/.local_profile
+ARCHFLAGS='-arch x86_64'
