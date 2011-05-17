@@ -5,6 +5,8 @@
     status = auto
     branch = auto
 [alias]
+    a = add
+    r = reset
     st = status
     ci = commit
     co = checkout
