@@ -3,6 +3,7 @@ export PYTHONPATH=$PYTHONPATH:/home/dickey/python/
 export EDITOR=vim
 alias ll='ls -alGF'
 alias l='ls -GF'
+alias cp='cp -v'
 [[ -s "/Users/dickey/.rvm/scripts/rvm" ]] && source "/Users/dickey/.rvm/scripts/rvm"
 source ~/.local_profile
 ARCHFLAGS='-arch x86_64'
