@@ -11,6 +11,7 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     r = reset
+    p = stage --patch
     d  = diff
     dt = difftool
     dc = diff --cached
