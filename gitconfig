@@ -7,6 +7,9 @@
 [alias]
     a = add
     l = log
+    lp = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     r = reset
     d  = diff
     dt = difftool
