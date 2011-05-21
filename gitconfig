@@ -18,6 +18,7 @@
     dtc = difftool --cached
     br = branch
     st = status
+    si = stage --interactive
     ci = commit
     co = checkout
     ps = push
