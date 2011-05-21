@@ -6,9 +6,12 @@
     branch = auto
 [alias]
     a = add
+    l = log
     r = reset
-    d = diff
+    d  = diff
     dt = difftool
+    dc = diff --cached
+    dtc = difftool --cached
     st = status
     ci = commit
     co = checkout
