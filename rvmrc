@@ -1,2 +1,2 @@
-export rvm_path="/Users/dickey/.rvm"
 export rvm_pretty_print_flag=1
+export rvm_path="/Users/dickeytk/.rvm"
