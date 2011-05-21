@@ -12,6 +12,7 @@
     dt = difftool
     dc = diff --cached
     dtc = difftool --cached
+    br = branch
     st = status
     ci = commit
     co = checkout
