@@ -1,3 +1,5 @@
+source ~/.git-completion.bash
+PS1='\h:\W$(__git_ps1 "(%s)") \u\$ '
 export CVSIGNORE='*.pyc settings*.py .DS_Store'
 export PYTHONPATH=$PYTHONPATH:/home/dickey/python/
 export EDITOR=vim
