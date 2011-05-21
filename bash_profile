@@ -4,5 +4,7 @@ export EDITOR=vim
 alias ll='ls -alGF'
 alias l='ls -GF'
 alias cp='cp -v'
+alias mv='mv -v'
 source ~/.local_profile
 ARCHFLAGS='-arch x86_64'
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
