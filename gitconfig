@@ -1,9 +1,7 @@
 [core]
     excludesfile = ~/.gitignore
 [color]
-    diff = auto
-    status = auto
-    branch = auto
+    ui= auto
 [alias]
     a = add
     l = log
