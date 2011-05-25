@@ -1,15 +1,22 @@
 [core]
     excludesfile = ~/.gitignore
 [color]
-    diff = auto
-    status = auto
-    branch = auto
+    ui= auto
 [alias]
     a = add
+    l = log
+    lp = log -p
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     r = reset
-    d = diff
+    p = stage --patch
+    d  = diff
     dt = difftool
+    dc = diff --cached
+    dtc = difftool --cached
+    br = branch
     st = status
+    si = stage --interactive
     ci = commit
     co = checkout
     ps = push
