@@ -1,10 +1,10 @@
 source ~/.git-completion.bash
-PS1="\h:\W\$( $( cat ~/.dotfiles/git-ps1/git-ps1.sh )) \u\$ "
+PS1="\h:\W\$(__git_ps1) \u\$ "
 export CVSIGNORE='*.pyc settings*.py .DS_Store'
 export PYTHONPATH=$PYTHONPATH:/home/dickey/python/
 export WORKON_HOME=~/.venvs
 export EDITOR=vim
-alias ll='ls -alGF'
+alias ll='ls -alGFh'
 alias l='ls -GF'
 alias cp='cp -v'
 alias mv='mv -v'
