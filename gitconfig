@@ -1,5 +1,6 @@
 [core]
     excludesfile = ~/.gitignore
+	autocrlf = true
 [color]
     ui= auto
 [alias]
