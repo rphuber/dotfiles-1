@@ -9,3 +9,4 @@ ln -s ~/.dotfiles/rvmrc ~/.rvmrc
 ln -s ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 ln -s ~/.dotfiles/gemrc ~/.gemrc
 ln -s ~/.dotfiles/ackrc ~/.ackrc
+source ~/.bash_profile
