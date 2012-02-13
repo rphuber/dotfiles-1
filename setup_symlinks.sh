@@ -10,4 +10,5 @@ ln -s ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 ln -s ~/.dotfiles/gemrc ~/.gemrc
 ln -s ~/.dotfiles/ackrc ~/.ackrc
 ln -sfn ~/.dotfiles/dotjs ~/.js
+ln -sf ~/.dotfiles/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
 source ~/.bash_profile
