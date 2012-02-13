@@ -1,14 +1,14 @@
 #!/bin/bash
 
-ln -s ~/.dotfiles/cvsignore ~/.cvsignore
-ln -s ~/.dotfiles/gitconfig ~/.gitconfig
-ln -s ~/.dotfiles/gitignore ~/.gitignore
-ln -s ~/.dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/bash_profile ~/.bash_profile
-ln -s ~/.dotfiles/rvmrc ~/.rvmrc
-ln -s ~/.dotfiles/git-completion.bash ~/.git-completion.bash
-ln -s ~/.dotfiles/gemrc ~/.gemrc
-ln -s ~/.dotfiles/ackrc ~/.ackrc
+ln -sf ~/.dotfiles/cvsignore ~/.cvsignore
+ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/gitignore ~/.gitignore
+ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
+ln -sf ~/.dotfiles/bash_profile ~/.bash_profile
+ln -sf ~/.dotfiles/rvmrc ~/.rvmrc
+ln -sf ~/.dotfiles/git-completion.bash ~/.git-completion.bash
+ln -sf ~/.dotfiles/gemrc ~/.gemrc
+ln -sf ~/.dotfiles/ackrc ~/.ackrc
 ln -sfn ~/.dotfiles/dotjs ~/.js
 ln -sf ~/.dotfiles/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
 source ~/.bash_profile
