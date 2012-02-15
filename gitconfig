@@ -22,6 +22,7 @@
     ps = push
     pl = pull
     sm = submodule
+    submodules = submodule
 [user]
     name = Jeff Dickey
     email = me@jeffdickey.info
