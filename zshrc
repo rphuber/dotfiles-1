@@ -36,6 +36,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/Users/jdickey/.rvm/gems/ree-1.8.7-2012.01/bin:/Users/jdickey/.rvm/gems/ree-1.8.7-2012.01@global/bin:/Users/jdickey/.rvm/rubies/ree-1.8.7-2012.01/bin:/Users/jdickey/.rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+__rvm_project_rvmrc
 
 ARCHFLAGS='-arch x86_64'
 
