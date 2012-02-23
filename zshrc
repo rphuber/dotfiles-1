@@ -7,9 +7,8 @@ ZSH=$HOME/.dotfiles/oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="blinks"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cp='cp -v'
+alias mv='mv -v'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
