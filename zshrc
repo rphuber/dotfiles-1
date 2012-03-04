@@ -41,3 +41,5 @@ __rvm_project_rvmrc
 ARCHFLAGS='-arch x86_64'
 
 source ~/.local_profile
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
