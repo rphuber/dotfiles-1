@@ -8,6 +8,7 @@ ln -sf ~/.dotfiles/gemrc ~/.gemrc
 ln -sf ~/.dotfiles/git-completion.bash ~/.git-completion.bash
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/gitignore ~/.gitignore
+ln -sf ~/.dotfiles/pryrc ~/.pryrc
 ln -sf ~/.dotfiles/rvmrc ~/.rvmrc
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/zshrc ~/.zshrc
