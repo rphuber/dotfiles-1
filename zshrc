@@ -28,7 +28,7 @@ alias mv='mv -v'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(autojump brew bundler gem git git-flow github ruby rails3 rails osx)
+plugins=(autojump brew gem git git-flow github ruby rails3 rails osx)
 
 source $ZSH/oh-my-zsh.sh
 
