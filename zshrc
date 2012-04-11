@@ -10,6 +10,8 @@ ZSH_THEME="blinks"
 alias cp='cp -v'
 alias mv='mv -v'
 
+alias tja='cd ~/proj/tapjoyserver-rails3/tapjoyads'
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
