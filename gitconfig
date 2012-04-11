@@ -25,7 +25,7 @@
     submodules = submodule
 [user]
     name = Jeff Dickey
-    email = me@jeffdickey.info
+    email = jeff@dickey.xxx
 [sendemail]
     smtpencryption = tls
     smtpserver = smtp.gmail.com
