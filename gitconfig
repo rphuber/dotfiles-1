@@ -31,14 +31,11 @@
     smtpserver = smtp.gmail.com
     smtpuser = dickeytk@gmail.com
     smtpserverport = 587
-[difftool "Kaleidoscope"]
-[difftool]
-[diff]
-[difftool "Kaleidoscope"]
-    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
-[difftool]
-    prompt = false
-[diff]
-    tool = Kaleidoscope
 [push]
     default = current
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false
+[diff]
+	tool = Kaleidoscope

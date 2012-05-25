@@ -10,6 +10,7 @@ ZSH_THEME="blinks"
 alias cp='cp -v'
 alias mv='mv -v'
 alias be='bundle exec'
+alias git='hub'
 
 alias tja='cd ~/proj/tapjoyserver-rails3/tapjoyads'
 
