@@ -10,9 +10,21 @@ ZSH_THEME="blinks"
 alias cp='cp -v'
 alias mv='mv -v'
 alias be='bundle exec'
-alias git='hub'
+eval "$(hub alias -s)"
 
 alias tja='cd ~/proj/tapjoyserver-rails3/tapjoyads'
+
+# heroku stuff
+
+function h { heroku $argv[0,-2] --app $argv[-1] }
+function hp { h $argv production_app_name }
+function hs { h $argv staging_app_name }
+
+alias hpc="hp run console"
+alias hsc="hs run console"
+
+alias hpl="hp logs -t"
+alias hsl="hs logs -t"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
