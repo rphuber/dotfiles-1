@@ -10,3 +10,4 @@ source /usr/local/bin/virtualenvwrapper.sh
 source ~/.local_profile
 ARCHFLAGS='-arch x86_64'
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+export PATH="$HOME/.rbenv/bin:$PATH"
