@@ -12,6 +12,7 @@ ln -sf ~/.dotfiles/pryrc ~/.pryrc
 ln -sf ~/.dotfiles/rvmrc ~/.rvmrc
 ln -sf ~/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/zshrc ~/.zshrc
+ln -sf ~/.dotfiles/zprofile ~/.zprofile
 
 # directories
 ln -sfn ~/.dotfiles/dotjs ~/.js
