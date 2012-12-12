@@ -59,11 +59,13 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ARCHFLAGS='-arch x86_64'
+export EDITOR=/usr/bin/vim
 
-source ~/.local_profile
-
+export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+source "`brew --prefix`/etc/grc.bashrc"
+
+source ~/.local_profile
+
