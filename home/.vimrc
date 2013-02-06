@@ -1,6 +1,4 @@
 " Pathogen
-call pathogen#infect()
-
 set shell=/bin/sh
 
 set nocompatible
@@ -11,10 +9,18 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'chriskempson/base16-vim'
 Bundle 'tpope/vim-rails.git'
-Bundle 'Lokaltog/powerline'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'scrooloose/syntastic'
+Bundle 'gmarik/github-search.vim'
+Bundle 'Indent-Guides'
+Bundle 'kien/ctrlp.vim'
 
 let mapleader = ","
 
@@ -28,6 +34,16 @@ map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
+
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
 set number
 set ruler
@@ -117,4 +133,12 @@ nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
 vmap <C-C> "+y
 
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+
+let g:Powerline_symbols = 'unicode'
+
+let g:github_search_path_format = '~/proj/:project'
+
 set vb t_vb=""
+
+set nofoldenable " disable folding
