@@ -13,6 +13,7 @@ Bundle 'tpope/vim-git'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'chriskempson/base16-vim'
 Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-bundler.git'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
@@ -21,6 +22,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'gmarik/github-search.vim'
 Bundle 'Indent-Guides'
 Bundle 'kien/ctrlp.vim'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'skwp/vim-ruby-conque'
 
 let mapleader = ","
 
