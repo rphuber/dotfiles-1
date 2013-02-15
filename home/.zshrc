@@ -68,4 +68,3 @@ eval "$(rbenv init - --no-rehash)"
 source "`brew --prefix`/etc/grc.bashrc"
 
 source ~/.local_profile
-
