@@ -51,8 +51,7 @@ set guioptions-=r
 set guioptions-=L
 
 " Default gui color scheme
-set background=light
-colorscheme jellybeans+
+colorscheme Monokai-Refined
 
 " ConqueTerm wrapper
 function StartTerm()
