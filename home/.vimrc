@@ -26,6 +26,7 @@ Bundle 'Indent-Guides'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'skwp/vim-ruby-conque'
+Bundle 'airblade/vim-gitgutter'
 
 let mapleader = ","
 
@@ -128,6 +129,8 @@ set cursorline
 " Default color scheme
 set background=dark
 colorscheme base16-default
+
+highlight clear SignColumn
 
 "Directories for swp files
 set backupdir=~/.vim/backup

@@ -53,6 +53,8 @@ set guioptions-=L
 " Default gui color scheme
 colorscheme Monokai-Refined
 
+highlight clear SignColumn
+
 " ConqueTerm wrapper
 function StartTerm()
   execute 'ConqueTerm ' . $SHELL . ' --login'
