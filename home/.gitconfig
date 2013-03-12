@@ -33,7 +33,8 @@
 [push]
     default = current
 [difftool "Kaleidoscope"]
-    cmd = ksdiff-wrapper git \"$LOCAL\" \"$REMOTE\"
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = true
 [difftool]
     prompt = false
 [diff]
