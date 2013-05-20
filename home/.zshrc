@@ -10,7 +10,6 @@ ZSH_THEME="dickeyxxx"
 alias cp='cp -v'
 alias mv='mv -v'
 alias be='bundle exec'
-eval "$(hub alias -s)"
 
 alias tja='cd ~/proj/tapjoyserver-rails3/tapjoyads'
 
@@ -47,16 +46,12 @@ unsetopt correct_all
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git-hubflow git git-flow)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/sbin
-
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-#__rvm_project_rvmrc
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/sbin
 
 ARCHFLAGS='-arch x86_64'
 export EDITOR=/usr/bin/vim
@@ -71,3 +66,6 @@ source ~/.local_profile
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+eval "$(hub alias -s)"
+alias git='nocorrect git'
+alias heroku='nocorrect heroku'
