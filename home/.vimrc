@@ -26,6 +26,11 @@ Bundle 'Indent-Guides'
 Bundle 'kien/ctrlp.vim'
 Bundle 'skwp/vim-ruby-conque'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'nono/vim-handlebars'
+Bundle 'darthdeus/vim-emblem'
+Bundle 'godlygeek/tabular'
+Bundle 'kana/vim-textobj-user'
+Bundle 'nelstrom/vim-textobj-rubyblock'
 
 let mapleader = ","
 
@@ -149,3 +154,12 @@ let g:github_search_path_format = '~/proj/:project'
 set vb t_vb=""
 
 set nofoldenable " disable folding
+
+" Tabularize
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
+
+" text-obj
+runtime macros/matchit.vim

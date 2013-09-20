@@ -51,7 +51,7 @@ plugins=(git-hubflow git git-flow)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/share/npm/bin:/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/sbin
+export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/sbin
 
 ARCHFLAGS='-arch x86_64'
 export EDITOR=/usr/bin/vim

@@ -45,3 +45,5 @@
     enabled = 1
 [heroku]
     account = personal
+[help]
+	autocorrect = 1
