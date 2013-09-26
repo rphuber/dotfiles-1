@@ -31,6 +31,7 @@ Bundle 'darthdeus/vim-emblem'
 Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'derekwyatt/vim-scala'
 
 let mapleader = ","
 

@@ -56,6 +56,8 @@ export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbi
 ARCHFLAGS='-arch x86_64'
 export EDITOR=/usr/bin/vim
 
+export SBT_OPTS=-XX:MaxPermSize=256m
+
 export PATH="/usr/local/heroku/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - --no-rehash)"
