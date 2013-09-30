@@ -11,8 +11,6 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias be='bundle exec'
 
-alias tja='cd ~/proj/tapjoyserver-rails3/tapjoyads'
-
 # heroku stuff
 
 function h { heroku $argv[0,-2] --app $argv[-1] }
@@ -46,7 +44,7 @@ unsetopt correct_all
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git-hubflow git git-flow)
+plugins=(git ruby hub hub-zsh-completion)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,15 +57,12 @@ export EDITOR=/usr/bin/vim
 export SBT_OPTS=-XX:MaxPermSize=256m
 
 export PATH="/usr/local/heroku/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
+SHELL=~/.zsh
 eval "$(rbenv init - --no-rehash)"
-
 source "`brew --prefix`/etc/grc.bashrc"
 
 source ~/.local_profile
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-eval "$(hub alias -s)"
-alias git='nocorrect git'
-alias heroku='nocorrect heroku'
+alias git='hub'

@@ -6,7 +6,6 @@ alias ll='ls -alGFh'
 alias l='ls -GF'
 alias cp='cp -v'
 alias mv='mv -v'
-source /usr/local/bin/virtualenvwrapper.sh
 source ~/.local_profile
 ARCHFLAGS='-arch x86_64'
 eval "$(rbenv init -)"

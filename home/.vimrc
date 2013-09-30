@@ -11,7 +11,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'chriskempson/base16-vim'
 Bundle 'jaromero/vim-monokai-refined'
 Bundle 'tpope/vim-rails.git'
 Bundle 'vim-ruby/vim-ruby'
@@ -132,8 +131,7 @@ set modelines=10
 set cursorline
 
 " Default color scheme
-set background=dark
-colorscheme base16-default
+set background=light
 
 highlight clear SignColumn
 
