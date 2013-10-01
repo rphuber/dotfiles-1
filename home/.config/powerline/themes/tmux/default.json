@@ -15,7 +15,7 @@
 			},
 			{
 				"name": "date",
-				"args": { "format": "%H:%M", "istime": true }
+				"args": { "format": "%l:%M %p", "istime": true }
 			},
 			{
 				"name": "hostname"
