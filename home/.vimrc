@@ -14,7 +14,6 @@ Bundle 'jaromero/vim-monokai-refined'
 Bundle 'tpope/vim-rails.git'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-bundler.git'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kchmck/vim-coffee-script'
@@ -143,10 +142,6 @@ nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
 vmap <C-C> "+y
 
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
-
-let g:Powerline_symbols = 'unicode'
-
 let g:github_search_path_format = '~/proj/:project'
 
 set vb t_vb=""
@@ -161,3 +156,10 @@ vmap <Leader>a: :Tabularize /:\zs<CR>
 
 " text-obj
 runtime macros/matchit.vim
+
+" powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+set laststatus=2
+set encoding=utf-8
