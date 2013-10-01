@@ -1,5 +1,4 @@
-" Pathogen
-set shell=/bin/sh
+set shell=/bin/bash
 
 set nocompatible
 
