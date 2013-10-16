@@ -11,9 +11,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jaromero/vim-monokai-refined'
-Bundle 'tpope/vim-rails.git'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-bundler.git'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kchmck/vim-coffee-script'
@@ -21,7 +21,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'gmarik/github-search.vim'
 Bundle 'Indent-Guides'
 Bundle 'kien/ctrlp.vim'
-Bundle 'skwp/vim-ruby-conque'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'nono/vim-handlebars'
 Bundle 'darthdeus/vim-emblem'
@@ -29,6 +28,11 @@ Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'slim-template/vim-slim'
+Bundle 'tpope/vim-abolish'
+Bundle 'vim-scripts/dbext.vim'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'tpope/vim-dispatch'
 
 let mapleader = ","
 
@@ -88,15 +92,12 @@ map <Leader>n :NERDTreeToggle<CR>
 " Fugitive configuration
 map <Leader>g :Gstatus<CR>
 
-" Extradite configuration
-map <Leader>l :Extradite!<CR>
-
-" Cmd-Shift-R for RSpec
-nmap <silent> <D-R> :call RunRspecCurrentFileConque()<CR>
-" Cmd-Shift-L for RSpec Current Line
-nmap <silent> <D-L> :call RunRspecCurrentLineConque()<CR>
-" ,Cmd-R for Last conque command
-nmap <silent> ,<D-R> :call RunLastConqueCommand()<CR>
+" rspec
+let g:rspec_command = "Dispatch zeus rspec {spec}"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -163,3 +164,7 @@ python powerline_setup()
 python del powerline_setup
 set laststatus=2
 set encoding=utf-8
+
+" tab shortcuts
+nmap tp :tabpre<CR>
+nmap tn :tabnext<CR>

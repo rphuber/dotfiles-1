@@ -49,10 +49,10 @@ plugins=(git ruby hub hub-zsh-completion)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/sbin
+export PATH=~/bin:/usr/local/share/npm/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/mysql/bin:/usr/local/lib/node_modules:/usr/local/sbin
 
 ARCHFLAGS='-arch x86_64'
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/local/bin/vim
 
 export SBT_OPTS=-XX:MaxPermSize=256m
 
@@ -65,4 +65,3 @@ source ~/.local_profile
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-alias git='hub'
