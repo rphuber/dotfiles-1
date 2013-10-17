@@ -88,6 +88,8 @@ set smartcase
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd vimenter * if !argc() | NERDTree | endif
 
 " Fugitive configuration
 map <Leader>g :Gstatus<CR>
@@ -168,3 +170,7 @@ set encoding=utf-8
 " tab shortcuts
 nmap tp :tabpre<CR>
 nmap tn :tabnext<CR>
+
+" auto reload file
+set autoread
+autocmd CursorHold * checktime
