@@ -22,6 +22,7 @@
     plr = pull --rebase
     sm = submodule
     submodules = submodule
+    mnff = merge --no-ff
 [user]
     name = dickeyxxx
     email = jeff@dickey.xxx
