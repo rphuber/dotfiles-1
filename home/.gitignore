@@ -5,3 +5,5 @@
 xcuserdata
 coverage
 ForwardFile
+.cadre
+errors.err
