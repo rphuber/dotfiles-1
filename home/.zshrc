@@ -39,7 +39,8 @@ DISABLE_UPDATE_PROMPT="true"
 # COMPLETION_WAITING_DOTS="true"
 
 # DISABLE AUTO CORRECT
-unsetopt correct_all
+unsetopt correct
+DISABLE_CORRECTION="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
