@@ -65,6 +65,7 @@ syntax on
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 let g:syntastic_coffee_coffeelint_args = "--file ~/.coffee-lint.json"
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 map <Leader>e :Errors<CR>
 
 
@@ -89,7 +90,6 @@ set smartcase
 " NERDTree configuration
 let NERDTreeIgnore=['\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd vimenter * if !argc() | NERDTree | endif
 
 " Fugitive configuration
