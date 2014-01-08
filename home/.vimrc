@@ -33,6 +33,9 @@ Bundle 'tpope/vim-abolish'
 Bundle 'vim-scripts/dbext.vim'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-dispatch'
+Bundle 'guns/vim-clojure-static'
+Bundle 'amdt/vim-niji'
+Bundle 'tpope/vim-fireplace'
 
 let mapleader = ","
 
