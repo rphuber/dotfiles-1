@@ -136,7 +136,7 @@ set modelines=10
 set cursorline
 
 " Default color scheme
-set background=light
+set background=dark
 
 highlight clear SignColumn
 
