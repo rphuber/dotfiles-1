@@ -62,5 +62,6 @@ eval "$(rbenv init - --no-rehash)"
 export PATH="/usr/local/heroku/bin:$PATH"
 SHELL=~/.zsh
 source "`brew --prefix`/etc/grc.bashrc"
+eval "$(grunt --completion=zsh)"
 
 source ~/.local_profile
