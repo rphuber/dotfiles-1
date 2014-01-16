@@ -58,6 +58,7 @@ ARCHFLAGS='-arch x86_64'
 export EDITOR=/usr/local/bin/vim
 
 export SBT_OPTS=-XX:MaxPermSize=256m
+export TMUX_USER=pair
 
 eval "$(rbenv init - --no-rehash)"
 
