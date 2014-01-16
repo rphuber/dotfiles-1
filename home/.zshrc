@@ -10,8 +10,6 @@ ZSH_THEME="dickeyxxx"
 alias cp='cp -v'
 alias mv='mv -v'
 alias be='bundle exec'
-alias rake='spring rake'
-alias rails='spring rails'
 
 # heroku stuff
 
