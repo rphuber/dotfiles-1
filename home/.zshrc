@@ -11,18 +11,6 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias be='bundle exec'
 
-# heroku stuff
-
-function h { heroku $argv[0,-2] --app $argv[-1] }
-function hp { h $argv production_app_name }
-function hs { h $argv staging_app_name }
-
-alias hpc="hp run console"
-alias hsc="hs run console"
-
-alias hpl="hp logs -t"
-alias hsl="hs logs -t"
-
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
 
@@ -60,7 +48,7 @@ export TMUX_USER=pair
 
 eval "$(rbenv init - --no-rehash)"
 
-export PATH=./bin:/usr/local/heroku/bin:$PATH
+export PATH=./bin:$PATH
 SHELL=~/.zsh
 source "`brew --prefix`/etc/grc.bashrc"
 source ~/bin/aws_zsh_completer.sh
