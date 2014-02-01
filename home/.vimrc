@@ -33,7 +33,9 @@ Bundle 'tpope/vim-abolish'
 Bundle 'vim-scripts/dbext.vim'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-dispatch'
+Bundle 'vim-scripts/paredit.vim'
 Bundle 'guns/vim-clojure-static'
+Bundle 'guns/vim-clojure-highlight'
 Bundle 'amdt/vim-niji'
 Bundle 'tpope/vim-fireplace'
 
@@ -174,6 +176,10 @@ set encoding=utf-8
 " tab shortcuts
 nmap tp :tabpre<CR>
 nmap tn :tabnext<CR>
+
+" paredit
+"let g:paredit_electric_return=1
+let g:paredit_leader='\'
 
 " auto reload file
 set autoread
