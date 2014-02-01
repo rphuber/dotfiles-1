@@ -11,3 +11,4 @@ errors.err
 .tags_sorted_by_file
 .lein-repl-history
 .envrc
+.*.swp
