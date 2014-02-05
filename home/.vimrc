@@ -7,14 +7,12 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-git'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jaromero/vim-monokai-refined'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/syntastic'
@@ -91,14 +89,6 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
-" NERDTree configuration
-let NERDTreeIgnore=['\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
-autocmd vimenter * if !argc() | NERDTree | endif
-
-" Fugitive configuration
-map <Leader>g :Gstatus<CR>
 
 " rspec
 let g:rspec_command = "Dispatch zeus rspec {spec}"
@@ -180,6 +170,8 @@ nmap tn :tabnext<CR>
 " paredit
 "let g:paredit_electric_return=1
 let g:paredit_leader='\'
+let g:paredit_shortmaps=1
+let g:smartjump=1
 
 " auto reload file
 set autoread

@@ -14,7 +14,7 @@ alias be='bundle exec'
 DISABLE_UPDATE_PROMPT="true"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git git-flow ruby autojump brew lein powify quote redis-cli tmux vi-mode fasd)
+plugins=(git git-flow ruby autojump brew lein powify quote redis-cli tmux vi-mode fasd history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
