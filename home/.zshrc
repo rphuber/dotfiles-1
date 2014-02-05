@@ -29,9 +29,16 @@ export TMUX_USER=pair
 eval "$(rbenv init - --no-rehash)"
 
 export PATH=./bin:$PATH
+export SSH_PRIVKEY_PATH=~/.ssh/id_rsa
 SHELL=~/.zsh
 source "`brew --prefix`/etc/grc.bashrc"
 #source ~/bin/aws_zsh_completer.sh
 #eval "$(grunt --completion=zsh)"
+
+hitch() {
+  command hitch "$@"
+  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
+}
+alias unhitch='hitch -u'
 
 eval "$(direnv hook zsh)"
