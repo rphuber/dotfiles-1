@@ -12,3 +12,4 @@ errors.err
 .lein-repl-history
 .envrc
 .*.swp
+Gemfile.local*

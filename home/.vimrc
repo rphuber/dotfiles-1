@@ -36,6 +36,8 @@ Bundle 'guns/vim-clojure-static'
 Bundle 'guns/vim-clojure-highlight'
 Bundle 'amdt/vim-niji'
 Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-surround'
+Bundle 'jnwhiteh/vim-golang'
 
 let mapleader = ","
 
