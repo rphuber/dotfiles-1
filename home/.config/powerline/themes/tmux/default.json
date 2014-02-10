@@ -1,25 +1,17 @@
 {
-	"default_module": "powerline.segments.common",
-	"segments": {
-    "left": [
-    ],
-		"right": [
+  "default_module": "powerline.segments.common",
+  "segments": {
+    "right": [
       {
         "name": "weather",
-        "priority": 50,
-        "args": { "unit": "F", "location_query": "90401" }
+        "priority": 2,
+        "args": {"unit": "F", "location_query": "90401"}
       },
-			{
-				"name": "system_load",
-				"priority": 50
-			},
-			{
-				"name": "date",
-				"args": { "format": "%l:%M %p", "istime": true }
-			},
-			{
-				"name": "hostname"
-			}
-		]
-	}
+      {
+        "name": "hostname",
+        "args": { "only_if_ssh": true },
+        "priority": 1
+      }
+        ]
+  }
 }

@@ -8,6 +8,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jaromero/vim-monokai-refined'
 Bundle 'tpope/vim-rails'
@@ -16,13 +17,11 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/syntastic'
-Bundle 'gmarik/github-search.vim'
 Bundle 'Indent-Guides'
 Bundle 'kien/ctrlp.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'nono/vim-handlebars'
 Bundle 'darthdeus/vim-emblem'
-Bundle 'godlygeek/tabular'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'derekwyatt/vim-scala'
@@ -33,11 +32,17 @@ Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-dispatch'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'guns/vim-clojure-static'
-Bundle 'guns/vim-clojure-highlight'
+"Bundle 'guns/vim-clojure-highlight'
 Bundle 'amdt/vim-niji'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-surround'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'dag/vim-fish'
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-endwise'
+Bundle 'Raimondi/delimitMate'
+Bundle 'elzr/vim-json'
+Bundle 'christoomey/vim-tmux-navigator'
 
 let mapleader = ","
 
@@ -45,12 +50,6 @@ let mapleader = ","
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
-
-" Map arrow keys
-map <c-h> <c-w>h
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
 
 " disable arrow keys
 map <up> <nop>
@@ -72,7 +71,6 @@ let g:syntastic_auto_loc_list=2
 let g:syntastic_coffee_coffeelint_args = "--file ~/.coffee-lint.json"
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
 map <Leader>e :Errors<CR>
-
 
 " Whitespace stuff
 set nowrap
@@ -114,14 +112,6 @@ filetype plugin indent on
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
-" Unimpaired configuration
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
 " Use modeline overrides
 set modeline
 set modelines=10
@@ -143,27 +133,18 @@ nmap <C-V> "+gP
 imap <C-V> <ESC><C-V>i
 vmap <C-C> "+y
 
-let g:github_search_path_format = '~/proj/:project'
-
 set vb t_vb=""
 
 set nofoldenable " disable folding
 
-" Tabularize
-nmap <Leader>a= :Tabularize /=<CR>
-vmap <Leader>a= :Tabularize /=<CR>
-nmap <Leader>a: :Tabularize /:\zs<CR>
-vmap <Leader>a: :Tabularize /:\zs<CR>
-
 " text-obj
 runtime macros/matchit.vim
 
-" powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" vim-airline
 set laststatus=2
-set encoding=utf-8
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+set ttimeoutlen=50
 
 " tab shortcuts
 nmap tp :tabpre<CR>
@@ -174,6 +155,11 @@ nmap tn :tabnext<CR>
 let g:paredit_leader='\'
 let g:paredit_shortmaps=1
 let g:smartjump=1
+
+" delimitMate
+let delimitMate_expand_cr = 1
+let delimitMate_jump_expansion = 1
+let delimitMate_balance_matchpairs = 1
 
 " auto reload file
 set autoread
