@@ -13,3 +13,5 @@ errors.err
 .envrc
 .*.swp
 Gemfile.local*
+*.coverprofile
+dickeyxxx.local.etcd

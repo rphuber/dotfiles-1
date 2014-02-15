@@ -44,4 +44,5 @@ $w██████╔╝██║╚██████╗██║  ██╗�
 $w╚═════╝ ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝   ╚═╝   $w╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝"
 
 . (rbenv init -|psub)
-set PATH /usr/local/bin $HOME/.rbenv/bin $PATH
+set PATH ./bin $HOME/bin $GOPATH/bin /usr/local/bin $HOME/.rbenv/bin $PATH
+eval (direnv hook fish)

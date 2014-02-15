@@ -2,14 +2,12 @@ set shell=/bin/bash
 
 set nocompatible
 
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'jaromero/vim-monokai-refined'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
@@ -17,45 +15,28 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'scrooloose/syntastic'
-Bundle 'Indent-Guides'
-Bundle 'kien/ctrlp.vim'
+Bundle 'Shougo/unite.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'nono/vim-handlebars'
 Bundle 'darthdeus/vim-emblem'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'slim-template/vim-slim'
 Bundle 'tpope/vim-abolish'
-Bundle 'vim-scripts/dbext.vim'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-dispatch'
-Bundle 'vim-scripts/paredit.vim'
-Bundle 'guns/vim-clojure-static'
-"Bundle 'guns/vim-clojure-highlight'
-Bundle 'amdt/vim-niji'
-Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-surround'
-Bundle 'jnwhiteh/vim-golang'
 Bundle 'dag/vim-fish'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-endwise'
-Bundle 'Raimondi/delimitMate'
 Bundle 'elzr/vim-json'
 Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'majutsushi/tagbar'
+Bundle 'mhinz/vim-startify'
+Bundle 'tsukkee/unite-tag'
+Bundle 'Shougo/vimproc'
+Bundle 'Blackrush/vim-gocode'
 
 let mapleader = ","
 
-" Map F1 to escape so it doesn't load help
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
-
 " disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
 map <up> <nop>
 map <down> <nop>
 map <left> <nop>
@@ -82,20 +63,14 @@ set softtabstop=2
 set expandtab
 set autoindent
 set smartindent
-set list listchars=tab:\ \ ,trail:·
+" Show trailing whitespace
+set list listchars=tab:\ \ ,trail:.
 
 " Searching
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
-" rspec
-let g:rspec_command = "Dispatch zeus rspec {spec}"
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -112,33 +87,24 @@ filetype plugin indent on
 " Sudo to write
 cmap w!! w !sudo tee % >/dev/null
 
-" Use modeline overrides
-set modeline
-set modelines=10
-
 " Highlight cursor line
 set cursorline
 
 " Default color scheme
 set background=dark
 
+" Gitgutter
 highlight clear SignColumn
 
-"Directories for swp files
+" Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" Copy and Paste
-nmap <C-V> "+gP
-imap <C-V> <ESC><C-V>i
-vmap <C-C> "+y
-
+" Disable beeping
 set vb t_vb=""
 
-set nofoldenable " disable folding
-
-" text-obj
-runtime macros/matchit.vim
+" disable folding
+set nofoldenable 
 
 " vim-airline
 set laststatus=2
@@ -149,17 +115,49 @@ set ttimeoutlen=50
 " tab shortcuts
 nmap tp :tabpre<CR>
 nmap tn :tabnext<CR>
+nmap bp :bp<CR>
+nmap bn :bn<CR>
 
-" paredit
-"let g:paredit_electric_return=1
-let g:paredit_leader='\'
-let g:paredit_shortmaps=1
-let g:smartjump=1
+nnoremap <silent> <Leader>n :TagbarToggle<CR>
 
-" delimitMate
-let delimitMate_expand_cr = 1
-let delimitMate_jump_expansion = 1
-let delimitMate_balance_matchpairs = 1
+" Go
+let g:tagbar_type_go = {
+    \ 'ctagstype': 'go',
+    \ 'kinds' : [
+        \'f:function',
+        \'v:var',
+        \'t:type'
+    \]
+    \}
+
+" Unite
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+call unite#filters#sorter_default#use(['sorter_rank'])
+call unite#set_profile('files', 'smartcase', 1)
+let g:unite_data_directory='~/.vim/.cache/unite'
+let g:unite_enable_start_insert=1
+let g:unite_enable_short_source_names=1
+let g:unite_prompt = '❫ '
+nnoremap <silent> <C-p> :<C-u>Unite -toggle -no-split file_rec/async buffer file_mru<cr><c-u>
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()
+  imap <buffer> jj      <Plug>(unite_exit)
+  imap <silent><buffer><expr> <C-s> unite#do_action('split')
+  imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
+endfunction
+
+
+" Startify
+let g:startify_custom_header = [
+      \ '   __      ___            ______ ____   ',
+      \ '   \ \    / (_)           |____  |___ \ ',
+      \ '    \ \  / / _ _ __ ___       / /  __) |',
+      \ '     \ \/ / | | ''_ ` _ \     / /  |__ <',
+      \ '      \  /  | | | | | | |   / /   ___) |',
+      \ '       \/   |_|_| |_| |_|  /_(_) |____/ ',
+      \ '',
+      \ '',
+      \ ]
 
 " auto reload file
 set autoread
