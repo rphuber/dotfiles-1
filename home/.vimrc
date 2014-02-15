@@ -32,7 +32,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'mhinz/vim-startify'
 Bundle 'tsukkee/unite-tag'
 Bundle 'Shougo/vimproc'
-Bundle 'Blackrush/vim-gocode'
+Bundle 'jnwhiteh/vim-golang'
 
 let mapleader = ","
 
@@ -112,15 +112,10 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set ttimeoutlen=50
 
-" tab shortcuts
-nmap tp :tabpre<CR>
-nmap tn :tabnext<CR>
-nmap bp :bp<CR>
-nmap bn :bn<CR>
-
 nnoremap <silent> <Leader>n :TagbarToggle<CR>
 
 " Go
+autocmd Filetype go setlocal noexpandtab
 let g:tagbar_type_go = {
     \ 'ctagstype': 'go',
     \ 'kinds' : [
