@@ -1,38 +1,51 @@
-set shell=/bin/bash
+if has('vim_starting')
+  set nocompatible
+  set shell=/bin/bash
 
-set nocompatible
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call neobundle#rc(expand('~/.vim/bundle/'))
 
-Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-fugitive'
-Bundle 'jaromero/vim-monokai-refined'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'scrooloose/syntastic'
-Bundle 'Shougo/unite.vim'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'nono/vim-handlebars'
-Bundle 'darthdeus/vim-emblem'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'slim-template/vim-slim'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-surround'
-Bundle 'dag/vim-fish'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-endwise'
-Bundle 'elzr/vim-json'
-Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'majutsushi/tagbar'
-Bundle 'mhinz/vim-startify'
-Bundle 'tsukkee/unite-tag'
-Bundle 'Shougo/vimproc'
-Bundle 'jnwhiteh/vim-golang'
+NeoBundle 'Shougo/vimproc', {
+      \  'build' : {
+      \    'mac' : 'make -f make_mac.mak',
+      \    'unix' : 'make -f make_unix.mak',
+      \  },
+      \}
+
+NeoBundle 'tpope/vim-git'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'jaromero/vim-monokai-refined'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-bundler'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'nono/vim-handlebars'
+NeoBundle 'darthdeus/vim-emblem'
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'tpope/vim-abolish'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'dag/vim-fish'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'elzr/vim-json'
+NeoBundle 'christoomey/vim-tmux-navigator'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'tsukkee/unite-tag'
+NeoBundle 'jnwhiteh/vim-golang'
+NeoBundle 'gkz/vim-ls'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'digitaltoad/vim-jade'
+
+NeoBundleCheck
 
 let mapleader = ","
 
@@ -50,7 +63,11 @@ syntax on
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 let g:syntastic_coffee_coffeelint_args = "--file ~/.coffee-lint.json"
-let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]
+let g:syntastic_mode_map=
+      \{ "mode": "active",
+      \  "active_filetypes": [],
+      \  "passive_filetypes": ["html"] }
+
 map <Leader>e :Errors<CR>
 
 " Whitespace stuff
@@ -156,4 +173,5 @@ let g:startify_custom_header = [
 
 " auto reload file
 set autoread
+set autowriteall
 autocmd CursorHold * checktime

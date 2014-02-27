@@ -11,3 +11,5 @@ ARCHFLAGS='-arch x86_64'
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:$HOME/src/go/bin:$PATH"
 
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
