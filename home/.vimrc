@@ -44,6 +44,7 @@ NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'gkz/vim-ls'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'digitaltoad/vim-jade'
+NeoBundle 'tpope/vim-dispatch'
 
 NeoBundleCheck
 
@@ -175,3 +176,7 @@ let g:startify_custom_header = [
 set autoread
 set autowriteall
 autocmd CursorHold * checktime
+
+" dispatch
+map <Leader>t :Dispatch<CR>
+autocmd FileType ruby let b:dispatch = 'rspec %'
