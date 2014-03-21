@@ -24,7 +24,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/unite.vim'
+NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'nono/vim-handlebars'
 NeoBundle 'darthdeus/vim-emblem'
@@ -39,9 +39,9 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'mhinz/vim-startify'
-NeoBundle 'tsukkee/unite-tag'
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'gkz/vim-ls'
+NeoBundle 'wavded/vim-stylus'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'tpope/vim-dispatch'
@@ -142,23 +142,6 @@ let g:tagbar_type_go = {
         \'t:type'
     \]
     \}
-
-" Unite
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-call unite#filters#sorter_default#use(['sorter_rank'])
-call unite#set_profile('files', 'smartcase', 1)
-let g:unite_data_directory='~/.vim/.cache/unite'
-let g:unite_enable_start_insert=1
-let g:unite_enable_short_source_names=1
-let g:unite_prompt = '❫ '
-nnoremap <silent> <C-p> :<C-u>Unite -toggle -no-split file_rec/async buffer file_mru<cr><c-u>
-autocmd FileType unite call s:unite_my_settings()
-function! s:unite_my_settings()
-  imap <buffer> jj      <Plug>(unite_exit)
-  imap <silent><buffer><expr> <C-s> unite#do_action('split')
-  imap <silent><buffer><expr> <C-v> unite#do_action('vsplit')
-endfunction
-
 
 " Startify
 let g:startify_custom_header = [
