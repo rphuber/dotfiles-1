@@ -1,6 +1,5 @@
 [core]
 	excludesfile = /Users/dickeyxxx/.gitignore
-	editor = /usr/bin/vim
 [color]
     ui = auto
 [alias]
