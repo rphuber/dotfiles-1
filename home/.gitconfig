@@ -1,57 +1,59 @@
 [core]
-	excludesfile = /Users/dickeyxxx/.gitignore
+  excludesfile = /Users/dickeyxxx/.gitignore
+  editor = /usr/bin/vim
+  autocrlf = input
 [color]
-    ui = auto
+  ui = auto
 [alias]
-    a = add
-    l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    lp = log -p --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-    r = reset
-    p = stage --patch
-    d  = diff
-    dt = difftool
-    dc = diff --cached
-    dtc = difftool --cached
-    br = branch
-    st = status
-    si = stage --interactive
-    ci = commit
-    co = checkout
-    ps = push
-    pl = pull
-    plr = pull --rebase
-    sm = submodule
-    submodules = submodule
+  a = add
+  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lp = log -p --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  r = reset
+  p = stage --patch
+  d  = diff
+  dt = difftool
+  dc = diff --cached
+  dtc = difftool --cached
+  br = branch
+  st = status
+  si = stage --interactive
+  ci = commit
+  co = checkout
+  ps = push
+  pl = pull
+  plr = pull --rebase
+  sm = submodule
+  submodules = submodule
 [user]
-    name = dickeyxxx
-    email = jeff@dickeyxxx.com
+  name = dickeyxxx
+  email = jeff@dickeyxxx.com
 [sendemail]
-    smtpencryption = tls
-    smtpserver = smtp.gmail.com
-    smtpuser = dickeytk@gmail.com
-    smtpserverport = 587
+  smtpencryption = tls
+  smtpserver = smtp.gmail.com
+  smtpuser = dickeytk@gmail.com
+  smtpserverport = 587
 [push]
-    default = current
+  default = current
 [difftool "Kaleidoscope"]
-    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-    trustExitCode = true
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+  trustExitCode = true
 [difftool]
-    prompt = false
+  prompt = false
 [diff]
-    tool = Kaleidoscope
+  tool = Kaleidoscope
 [credential]
-    helper = osxkeychain
+  helper = osxkeychain
 [rerere]
-    enabled = 1
+  enabled = 1
 [heroku]
-    account = personal
+  account = personal
 [help]
-	autocorrect = 1
+  autocorrect = 1
 [merge]
-    ff = false
+  ff = false
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true

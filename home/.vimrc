@@ -6,15 +6,11 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-NeoBundle 'Shougo/vimproc', {
-      \  'build' : {
-      \    'mac' : 'make -f make_mac.mak',
-      \    'unix' : 'make -f make_unix.mak',
-      \  },
-      \}
+NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak' } }
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'jaromero/vim-monokai-refined'
@@ -45,6 +41,7 @@ NeoBundle 'wavded/vim-stylus'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'mattn/emmet-vim'
 
 NeoBundleCheck
 
@@ -130,8 +127,6 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set ttimeoutlen=50
 
-nnoremap <silent> <Leader>n :TagbarToggle<CR>
-
 " Go
 autocmd Filetype go setlocal noexpandtab
 let g:tagbar_type_go = {
@@ -159,6 +154,9 @@ let g:startify_custom_header = [
 set autoread
 set autowriteall
 autocmd CursorHold * checktime
+
+" ctrlp
+set wildignore+=*/node_modules/*
 
 " dispatch
 map <Leader>t :Dispatch<CR>
