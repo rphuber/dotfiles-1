@@ -1,16 +1,13 @@
+set shell=/bin/bash
+
 if has('vim_starting')
   set nocompatible
-  set shell=/bin/bash
-
-  " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle'))
+NeoBundleFetch 'Shuogo/neobundle.vim'
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'Shougo/vimproc', { 'build' : { 'mac' : 'make -f make_mac.mak' } }
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'jaromero/vim-monokai-refined'
@@ -26,7 +23,6 @@ NeoBundle 'nono/vim-handlebars'
 NeoBundle 'darthdeus/vim-emblem'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'slim-template/vim-slim'
-NeoBundle 'tpope/vim-abolish'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'dag/vim-fish'
 NeoBundle 'bling/vim-airline'
@@ -34,14 +30,14 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'mhinz/vim-startify'
 NeoBundle 'jnwhiteh/vim-golang'
-NeoBundle 'gkz/vim-ls'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'mattn/emmet-vim'
+
+call neobundle#end()
 
 NeoBundleCheck
 
@@ -99,9 +95,6 @@ set backspace=indent,eol,start
 " load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
-" Sudo to write
-cmap w!! w !sudo tee % >/dev/null
-
 " Highlight cursor line
 set cursorline
 
@@ -137,18 +130,6 @@ let g:tagbar_type_go = {
         \'t:type'
     \]
     \}
-
-" Startify
-let g:startify_custom_header = [
-      \ '   __      ___            ______ ____   ',
-      \ '   \ \    / (_)           |____  |___ \ ',
-      \ '    \ \  / / _ _ __ ___       / /  __) |',
-      \ '     \ \/ / | | ''_ ` _ \     / /  |__ <',
-      \ '      \  /  | | | | | | |   / /   ___) |',
-      \ '       \/   |_|_| |_| |_|  /_(_) |____/ ',
-      \ '',
-      \ '',
-      \ ]
 
 " auto reload file
 set autoread
