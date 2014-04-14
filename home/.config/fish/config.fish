@@ -35,6 +35,8 @@ end
 
 alias be "bundle exec"
 
+set GOPATH=$HOME/go
+
 . (rbenv init -|psub)
 set PATH ./bin $HOME/bin $GOPATH/bin /usr/local/bin $HOME/.rbenv/bin $PATH
 eval (direnv hook fish)
