@@ -142,3 +142,6 @@ set wildignore+=*/node_modules/*
 " dispatch
 map <Leader>t :Dispatch<CR>
 autocmd FileType ruby let b:dispatch = 'rspec %'
+
+" html
+let g:html_indent_inctags = "html,body,head,li"
