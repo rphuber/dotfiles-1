@@ -34,6 +34,7 @@ function fish_prompt
 end
 
 alias be "bundle exec"
+alias git "hub"
 
 set GOPATH=$HOME/go
 
