@@ -40,4 +40,5 @@ set GOPATH=$HOME/go
 
 . (rbenv init -|psub)
 set PATH ./bin $HOME/bin $GOPATH/bin /usr/local/bin $HOME/.rbenv/bin $PATH
+set PATH /usr/local/lib/node_modules/karma/bin $PATH
 eval (direnv hook fish)
