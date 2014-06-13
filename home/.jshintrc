@@ -1,4 +1,5 @@
 {
+    "asi": false,
     "bitwise": true,
     "curly": false,
     "eqeqeq": true,
@@ -24,10 +25,12 @@
     "predef": [
         "_",
         "angular",
-        "expect",     // jasmine
-        "inject",     // jasmine
-        "describe",   // mocha
-        "beforeEach", // mocha
-        "it"          // mocha
+        "expect",
+        "inject",
+        "describe",
+        "beforeEach",
+        "it",
+        "React",
+        "document"
     ]
 }
