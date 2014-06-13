@@ -16,3 +16,4 @@ Gemfile.local*
 *.coverprofile
 dickeyxxx.local.etcd
 npm-debug.log
+node_modules
