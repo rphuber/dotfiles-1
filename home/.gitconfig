@@ -27,33 +27,13 @@
 [user]
   name = dickeyxxx
   email = jeff@dickeyxxx.com
-[sendemail]
-  smtpencryption = tls
-  smtpserver = smtp.gmail.com
-  smtpuser = dickeytk@gmail.com
-  smtpserverport = 587
 [push]
   default = current
-[difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-  trustExitCode = true
-[difftool]
-  prompt = false
-[diff]
-  tool = Kaleidoscope
 [credential]
   helper = osxkeychain
 [rerere]
   enabled = 1
-[heroku]
-  account = personal
 [help]
   autocorrect = 1
 [merge]
   ff = false
-[difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
-[mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
