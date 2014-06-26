@@ -27,6 +27,12 @@
 [user]
   name = dickeyxxx
   email = jeff@dickeyxxx.com
+  signingkey = E0B5BB94
+[sendemail]
+  smtpencryption = tls
+  smtpserver = smtp.gmail.com
+  smtpuser = dickeytk@gmail.com
+  smtpserverport = 587
 [push]
   default = current
 [credential]
