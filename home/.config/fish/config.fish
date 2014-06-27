@@ -36,7 +36,7 @@ end
 alias be "bundle exec"
 alias git "hub"
 
-set GOPATH $HOME/go
+set -x GOPATH $HOME/go
 
 . (rbenv init -|psub)
 set PATH ./bin $HOME/bin $GOPATH/bin /usr/local/bin $HOME/.rbenv/bin $PATH
