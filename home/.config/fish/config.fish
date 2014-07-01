@@ -35,6 +35,7 @@ end
 
 alias be "bundle exec"
 alias git "hub"
+alias heroku hk
 
 set -x GOPATH $HOME/go
 

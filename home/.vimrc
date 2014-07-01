@@ -30,13 +30,13 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'elzr/vim-json'
 NeoBundle 'christoomey/vim-tmux-navigator'
 NeoBundle 'majutsushi/tagbar'
-NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'digitaltoad/vim-jade'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'fatih/vim-go'
 
 call neobundle#end()
 
@@ -120,17 +120,6 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 set ttimeoutlen=50
-
-" Go
-autocmd Filetype go setlocal noexpandtab
-let g:tagbar_type_go = {
-    \ 'ctagstype': 'go',
-    \ 'kinds' : [
-        \'f:function',
-        \'v:var',
-        \'t:type'
-    \]
-    \}
 
 " auto reload file
 set autoread
