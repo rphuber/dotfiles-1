@@ -37,6 +37,7 @@ NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'mxw/vim-jsx'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'Valloric/YouCompleteMe'
 
 call neobundle#end()
 
