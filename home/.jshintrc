@@ -23,6 +23,7 @@
     "undef": true,
     "unused": true,
     "predef": [
+        "$",
         "angular",
         "expect",
         "inject",
