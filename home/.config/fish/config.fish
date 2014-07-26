@@ -35,7 +35,7 @@ end
 
 alias be "bundle exec"
 alias git "hub"
-alias heroku hk
+alias gohome "cd $HOME/go/src/github.com/dickeyxxx"
 
 set -x GOPATH $HOME/go
 
