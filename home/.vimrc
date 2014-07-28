@@ -33,9 +33,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'digitaltoad/vim-jade'
-NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'mxw/vim-jsx'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'Valloric/YouCompleteMe'
 
@@ -58,7 +56,6 @@ syntax on
 " Syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
-let g:syntastic_javascript_checkers = ['jsxhint']
 let g:syntastic_mode_map=
       \{ "mode": "active",
       \  "active_filetypes": [],
@@ -114,7 +111,7 @@ set directory=~/.vim/backup
 set vb t_vb=""
 
 " disable folding
-set nofoldenable 
+set nofoldenable
 
 " vim-airline
 set laststatus=2
@@ -130,9 +127,8 @@ autocmd CursorHold * checktime
 " ctrlp
 set wildignore+=*/node_modules/*
 
-" dispatch
-map <Leader>t :Dispatch<CR>
-autocmd FileType ruby let b:dispatch = 'rspec %'
-
 " html
 let g:html_indent_inctags = "html,body,head,li"
+
+" go
+let g:syntastic_go_checkers = ['gotype', 'govet', 'golint']

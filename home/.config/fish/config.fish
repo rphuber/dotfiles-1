@@ -35,11 +35,12 @@ end
 
 alias be "bundle exec"
 alias git "hub"
-alias gohome "cd $HOME/go/src/github.com/dickeyxxx"
+alias src "cd $HOME/src/github.com/dickeyxxx"
+alias heroku hk
+alias rm rmtrash
 
-set -x GOPATH $HOME/go
+set -x GOPATH $HOME
 
 . (rbenv init -|psub)
-set PATH ./bin $HOME/bin $GOPATH/bin /usr/local/bin $HOME/.rbenv/bin $PATH
-set PATH /usr/local/lib/node_modules/karma/bin $PATH
+set PATH ./bin ./node_modules/.bin $HOME/bin /usr/local/bin $HOME/.rbenv/bin $PATH
 eval (direnv hook fish)
