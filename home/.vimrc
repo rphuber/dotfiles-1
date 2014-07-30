@@ -8,6 +8,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shuogo/neobundle.vim'
 
+NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'jaromero/vim-monokai-refined'
@@ -38,6 +39,7 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'Valloric/YouCompleteMe'
+NeoBundle 'Raimondi/delimitMate'
 
 call neobundle#end()
 
@@ -75,8 +77,7 @@ set softtabstop=2
 set expandtab
 set autoindent
 set smartindent
-" Show trailing whitespace
-set list listchars=tab:\ \ ,trail:.
+set list
 
 " Searching
 set hlsearch
