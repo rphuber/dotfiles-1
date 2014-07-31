@@ -1,4 +1,10 @@
 function fish_prompt
+  set -l last_status $status
+  set -l last_status_output ""
+
+  if [ $last_status -ne 0 ]
+    set last_status_output $last_status " "
+  end
 
   if not set -q -g __fish_robbyrussell_functions_defined
     set -g __fish_robbyrussell_functions_defined
@@ -18,7 +24,7 @@ function fish_prompt
   set -l normal (set_color normal)
 
   set -l xxx "$red✗✗✗"
-  set -l cwd $cyan(basename (prompt_pwd))
+  set -l cwd $cyan(prompt_pwd)
 
   if [ (_git_branch_name) ]
     set -l git_branch $red(_git_branch_name)
@@ -30,17 +36,16 @@ function fish_prompt
     end
   end
 
-  echo -n -s $xxx ' '$cwd $git_info $normal ' '
+  echo -n -s $xxx ' ' $cwd $git_info $normal ' ' $red $last_status_output $normal
 end
 
 alias be "bundle exec"
 alias git "hub"
 alias src "cd $HOME/src/github.com/dickeyxxx"
 alias heroku hk
-alias rm rmtrash
+alias rm=rmtrash
 
 set -x GOPATH $HOME
 
-. (rbenv init -|psub)
 set PATH ./bin ./node_modules/.bin $HOME/bin /usr/local/bin $HOME/.rbenv/bin $PATH
 eval (direnv hook fish)
