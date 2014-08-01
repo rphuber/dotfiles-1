@@ -1,5 +1,5 @@
 [core]
-  excludesfile = /Users/dickeyxxx/.gitignore
+  excludesfile = ~/.gitignore
   editor = /usr/local/bin/vim
   autocrlf = input
 [color]
