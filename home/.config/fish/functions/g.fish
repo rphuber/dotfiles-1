@@ -1,0 +1,1 @@
+/Users/jdickey/src/github.com/dickeyxxx/g/g.fish
