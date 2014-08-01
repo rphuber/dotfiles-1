@@ -36,7 +36,7 @@ function fish_prompt
     end
   end
 
-  echo -n -s $xxx ' ' $cwd $git_info $normal ' ' $red $last_status_output $normal
+  echo -s $xxx ' ' $cwd $git_info $normal ' ' $red $last_status_output $normal
 end
 
 alias be "bundle exec"
