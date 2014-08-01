@@ -18,3 +18,4 @@ dickeyxxx.local.etcd
 npm-debug.log
 node_modules
 .idea
+.ruby-version
