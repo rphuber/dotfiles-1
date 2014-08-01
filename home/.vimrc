@@ -78,6 +78,7 @@ set expandtab
 set autoindent
 set smartindent
 set list
+set listchars=tab:\ \ ,trail:·
 
 " Searching
 set hlsearch
