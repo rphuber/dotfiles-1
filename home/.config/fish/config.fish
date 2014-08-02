@@ -5,7 +5,7 @@ set fish_greeting (whoami)@(hostname) \
  | . | |  _| '_| -_| | |_'_|_'_|_'_|
  |___|_|___|_,_|___|_  |_,_|_,_|_,_|
                    |___|" \
-\n\n (set_color yellow) (fortune) (set_color normal) \n
+(set_color yellow) \n\n(fortune) (set_color normal) \n
 
 alias be "bundle exec"
 alias git "hub"
