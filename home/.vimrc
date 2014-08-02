@@ -41,6 +41,7 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'slindberg/vim-colors-smyck'
 
 call neobundle#end()
 
@@ -104,6 +105,7 @@ set cursorline
 
 " Default color scheme
 set background=dark
+colorscheme smyck
 
 " Gitgutter
 highlight clear SignColumn
