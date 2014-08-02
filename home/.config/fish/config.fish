@@ -1,7 +1,11 @@
-set fish_greeting (set_color C60000) " _|¯|_|___|¯|_ ___ _ _ _ _ _ _ _ _
+set -e fish_greeting
+set fish_greeting (whoami)@(hostname) \
+(set_color C60000) \n "
+  _|¯|_|___|¯|_ ___ _ _ _ _ _ _ _ _
  | . | |  _| '_| -_| | |_'_|_'_|_'_|
  |___|_|___|_,_|___|_  |_,_|_,_|_,_|
-                   |___|" (set color normal)
+                   |___|" \
+\n\n (set_color yellow) (fortune) (set_color normal) \n
 
 alias be "bundle exec"
 alias git "hub"
