@@ -1,7 +1,7 @@
-set fish_greeting "  _| |_|___| |_ ___ _ _ _ _ _ _ _ _
+set fish_greeting (set_color C60000) " _|¯|_|___|¯|_ ___ _ _ _ _ _ _ _ _
  | . | |  _| '_| -_| | |_'_|_'_|_'_|
  |___|_|___|_,_|___|_  |_,_|_,_|_,_|
-                   |___|"
+                   |___|" (set color normal)
 
 alias be "bundle exec"
 alias git "hub"
