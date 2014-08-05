@@ -146,11 +146,6 @@ nnoremap <C-t>n :tabnext<CR>
 " tagbar
 nmap <Leader>t :TagbarToggle<CR>
 
-" Golang
-let g:syntastic_go_checkers = ['gotype', 'govet', 'golint']
-au FileType go nmap <C-i> <Plug>(go-info)
-au FileType go nmap <C-g> <Plug>(go-def)
-
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
