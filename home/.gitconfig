@@ -27,7 +27,7 @@
 [user]
   name = dickeyxxx
   email = jeff@dickeyxxx.com
-  signingkey = E0B5BB94
+  signingkey = 3508ABDD
 [commit]
   gpgsign = true
 [sendemail]
