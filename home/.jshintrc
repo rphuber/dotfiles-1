@@ -22,13 +22,18 @@
     "trailing": true,
     "undef": true,
     "unused": true,
+    "globals": {
+      "expect": true
+    },
     "predef": [
         "$",
         "angular",
-        "expect",
         "inject",
         "describe",
+        "before",
         "beforeEach",
+        "after",
+        "afterEach",
         "it",
         "React",
         "document"
