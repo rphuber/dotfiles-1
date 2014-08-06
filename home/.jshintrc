@@ -27,15 +27,19 @@
     },
     "predef": [
         "$",
-        "angular",
-        "inject",
-        "describe",
-        "before",
-        "beforeEach",
+        "React",
         "after",
         "afterEach",
+        "angular",
+        "before",
+        "beforeEach",
+        "browser",
+        "by",
+        "describe",
+        "document",
+        "element",
+        "inject",
         "it",
-        "React",
-        "document"
+        "sinon"
     ]
 }
