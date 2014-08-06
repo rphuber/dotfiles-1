@@ -1,3 +1,0 @@
-[submodule "emacs-live"]
-  path = home/.emacs.d
-  url  = git@github.com:overtone/emacs-live.git
