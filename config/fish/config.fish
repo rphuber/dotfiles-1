@@ -13,5 +13,5 @@ alias git "hub"
 set -x GOPATH $HOME
 
 . (rbenv init - | psub)
-set PATH ./bin ./node_modules/.bin $HOME/bin /usr/local/bin $HOME/.rbenv/bin $PATH
+set PATH /usr/local/heroku/bin ./node_modules/.bin $HOME/bin /usr/local/bin /usr/local/sbin $HOME/.rbenv/bin $PATH
 eval (direnv hook fish)
