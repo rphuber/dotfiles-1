@@ -40,7 +40,6 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'Valloric/YouCompleteMe'
-NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'slindberg/vim-colors-smyck'
 
 call neobundle#end()
