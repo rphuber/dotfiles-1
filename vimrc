@@ -12,7 +12,6 @@ NeoBundle 'Shougo/vimproc.vim', { 'build' : { 'mac' : 'make -f make_mac.mak' } }
 NeoBundle 'tpope/vim-sensible'
 NeoBundle 'tpope/vim-git'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'jaromero/vim-monokai-refined'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-bundler'
 NeoBundle 'vim-ruby/vim-ruby'
