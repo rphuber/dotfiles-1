@@ -14,3 +14,4 @@ ln -svf $current_dir/vimrc      ~/.vimrc
 
 ln -svfn $current_dir/config     ~/.config
 ln -svfn $current_dir/vim        ~/.vim
+ln -svfn $current_dir/bundle     ~/.bundle
