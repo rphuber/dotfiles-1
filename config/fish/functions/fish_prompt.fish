@@ -1,15 +1,4 @@
 function fish_prompt
-  if not set -q -g __fish_robbyrussell_functions_defined
-    set -g __fish_robbyrussell_functions_defined
-    function _git_branch_name
-      echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
-    end
-
-    function _is_git_dirty
-      echo (git status -s --ignore-submodules=dirty ^/dev/null)
-    end
-  end
-
   set -l cyan (set_color cyan)
   set -l yellow (set_color yellow)
   set -l red (set_color red)
@@ -38,4 +27,12 @@ function fish_right_prompt
   if [ $last_status -ne 0 ]
     echo -s (set_color red) "#" $last_status (set_color normal)
   end
+end
+
+function _is_git_dirty
+  echo (git status -s --ignore-submodules=dirty ^/dev/null)
+end
+
+function _git_branch_name
+  echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
 end
