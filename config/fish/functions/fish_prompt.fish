@@ -1,22 +1,12 @@
 function fish_prompt
   set -l cyan (set_color cyan)
-  set -l yellow (set_color yellow)
   set -l red (set_color red)
-  set -l blue (set_color blue)
   set -l normal (set_color normal)
 
   set -l xxx "$red✗✗✗"
   set -l cwd $cyan(prompt_pwd)
 
-  if [ (_git_branch_name) ]
-    set -l git_branch $yellow(_git_branch_name)
-    if [ (_is_git_dirty) ]
-      set git_info ":($git_branch$red!$blue)"
-    else
-      set git_info ":($git_branch$blue)"
-    end
-  end
-
+  set -l git_info (_git_info)
   set -l ruby_version (rbenv version-name)
 
   echo -s "$xxx $ruby_version $cwd$git_info $normal"
@@ -29,10 +19,33 @@ function fish_right_prompt
   end
 end
 
+function _git_info
+  set -l red (set_color red)
+  set -l blue (set_color blue)
+  set -l yellow (set_color yellow)
+  set -l green (set_color green)
+  set -l git_branch (_git_branch_name)
+  if [ (_git_branch_name) ]
+    if [ (_is_git_dirty) ]
+      set git_dirty $red!
+    end
+    set -l git_ahead_count (_git_ahead_count $git_branch)
+    if [ $git_ahead_count != 0 ]
+      set ahead_count " $green+$git_ahead_count"
+    end
+
+    echo ":($yellow$git_branch$git_dirty$ahead_count$blue)"
+  end
+end
+
 function _is_git_dirty
   echo (git status -s --ignore-submodules=dirty ^/dev/null)
 end
 
 function _git_branch_name
   echo (git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+end
+
+function _git_ahead_count -a branch_name
+  echo (command git log origin/$branch_name..HEAD ^/dev/null | grep '^commit' | wc -l | tr -d ' ')
 end
