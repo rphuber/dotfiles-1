@@ -8,7 +8,9 @@ set fish_greeting (whoami)@(hostname) \
 (set_color yellow) \n\n(fortune) (set_color normal) \n
 
 alias be "bundle exec"
-alias git "hub"
+if type hub > /dev/null
+  alias git "hub"
+end
 
 set -x GOPATH $HOME
 
