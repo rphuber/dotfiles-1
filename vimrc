@@ -42,6 +42,7 @@ NeoBundle 'Valloric/YouCompleteMe'
 NeoBundle 'slindberg/vim-colors-smyck'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'briancollins/vim-jst'
+NeoBundle 'jsx/jsx.vim'
 
 call neobundle#end()
 

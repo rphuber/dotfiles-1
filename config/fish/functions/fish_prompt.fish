@@ -7,8 +7,9 @@ function fish_prompt
   set -l cwd $cyan(prompt_pwd)
 
   set -l git_info (_git_info)
-  if [ type rbenv ]
-    set -l ruby_version (rbenv version-name)
+
+  if type rbenv > /dev/null
+    set ruby_version (rbenv version-name)
   end
 
   echo -s "$xxx $ruby_version $cwd$git_info $normal"
