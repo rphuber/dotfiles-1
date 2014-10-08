@@ -12,7 +12,9 @@ function fish_prompt
     set ruby_version (rbenv version-name)
   end
 
-  echo -s "$xxx $ruby_version $cwd$git_info $normal"
+  set -l hostname @(hostname)
+
+  echo -s "$xxx$hostname $ruby_version $cwd$git_info $normal"
 end
 
 function fish_right_prompt
