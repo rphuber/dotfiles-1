@@ -3,7 +3,11 @@ function fish_prompt
   set -l red (set_color red)
   set -l normal (set_color normal)
 
-  set -l xxx "$red✗✗✗"
+  set -l user (whoami)
+  if [ user = "dickeyxxx" ]
+    set user "✗✗✗"
+  end
+
   set -l cwd $cyan(prompt_pwd)
 
   set -l git_info (_git_info)
@@ -14,7 +18,7 @@ function fish_prompt
 
   set -l hostname @(hostname)
 
-  echo -s "$xxx$hostname $ruby_version $cwd$git_info $normal"
+  echo -s "$red$user$hostname $ruby_version $cwd$git_info $normal"
 end
 
 function fish_right_prompt
