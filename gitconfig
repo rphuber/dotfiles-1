@@ -43,7 +43,5 @@
   enabled = 1
 [help]
   autocorrect = 1
-[merge]
-  ff = false
 [heroku]
   account = heroku
