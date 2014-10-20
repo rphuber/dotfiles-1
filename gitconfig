@@ -29,7 +29,7 @@
   email = jeff@dickeyxxx.com
   signingkey = 3508ABDD
 [commit]
-  gpgsign = true
+  ;gpgsign = true
 [sendemail]
   smtpencryption = tls
   smtpserver = smtp.gmail.com
