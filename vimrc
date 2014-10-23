@@ -158,8 +158,5 @@ vmap <Leader>a= :Tabularize /=<CR>
 nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
-" Go
-let g:go_bin_path = expand("~/bin")
-
 " YouCompleteMe
 set completeopt=menuone " dispable autocomplete preview
