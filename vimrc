@@ -159,4 +159,4 @@ nmap <Leader>a: :Tabularize /:\zs<CR>
 vmap <Leader>a: :Tabularize /:\zs<CR>
 
 " YouCompleteMe
-set completeopt=menuone " dispable autocomplete preview
+set completeopt=menuone " disable autocomplete preview
