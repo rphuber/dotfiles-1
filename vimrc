@@ -56,6 +56,13 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" mouse
+if has("mouse")
+  set ttyfast
+  set mouse=a
+  set ttymouse=xterm2
+endif
+
 set number
 set ruler
 syntax on
