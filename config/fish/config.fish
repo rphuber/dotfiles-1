@@ -1,6 +1,5 @@
 set -e fish_greeting
-set fish_greeting (whoami)@(hostname) \
-(set_color C60000) \n "
+set fish_greeting (set_color C60000) "
   _|¯|¯|___|¯|_ ___ _ _ _ _ _ _ _ _
  | . | |  _| '_| -_| | |_'_|_'_|_'_|
  |___|_|___|_,_|___|_  |_,_|_,_|_,_|
