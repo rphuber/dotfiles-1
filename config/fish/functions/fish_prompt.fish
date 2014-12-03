@@ -1,24 +1,21 @@
 function fish_prompt
   set -l cyan (set_color cyan)
   set -l red (set_color red)
+  set -l orange (set_color ff7f00)
   set -l normal (set_color normal)
-
-  set -l user (whoami)
-  if [ user = "dickeyxxx" ]
-    set user "✗✗✗"
-  end
 
   set -l cwd $cyan(prompt_pwd)
 
   set -l git_info (_git_info)
 
   if type rbenv > /dev/null
-    set ruby_version (rbenv version-name)
+    set ruby_version " "(rbenv version-name)
+    if [ $ruby_version = " 2.1.5" ]
+      set ruby_version ""
+    end
   end
 
-  set -l hostname @(hostname)
-
-  echo -s "$red$user$hostname $ruby_version $cwd$git_info $normal"
+  echo -s "$orange☸$red$ruby_version $cwd$git_info $normal"
 end
 
 function fish_right_prompt
