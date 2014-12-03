@@ -43,6 +43,7 @@ NeoBundle 'slindberg/vim-colors-smyck'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'briancollins/vim-jst'
 NeoBundle 'jsx/jsx.vim'
+NeoBundle 'marijnh/tern_for_vim'
 
 call neobundle#end()
 
