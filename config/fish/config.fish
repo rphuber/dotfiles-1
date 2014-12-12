@@ -16,5 +16,5 @@ set -x GOPATH $HOME
 if type rbenv > /dev/null
   . (rbenv init - | psub)
 end
-set PATH /usr/local/heroku/bin ./bin ./node_modules/.bin /usr/local/opt/go/libexec/bin $HOME/bin /usr/local/bin /usr/local/sbin $HOME/.rbenv/bin $PATH
+set PATH ./bin ./node_modules/.bin /usr/local/opt/go/libexec/bin $HOME/bin /usr/local/bin /usr/local/sbin $HOME/.rbenv/bin $PATH
 eval (direnv hook fish)

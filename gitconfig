@@ -43,5 +43,3 @@
   enabled = 1
 [help]
   autocorrect = 1
-[heroku]
-  account = heroku
