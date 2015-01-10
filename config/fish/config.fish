@@ -11,6 +11,7 @@ if type hub > /dev/null
   alias git "hub"
 end
 
+set -x GITHUB dickeyxxx
 set -x GOPATH $HOME
 
 if type rbenv > /dev/null
