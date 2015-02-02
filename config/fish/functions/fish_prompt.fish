@@ -10,7 +10,7 @@ function fish_prompt
 
   if type rbenv > /dev/null
     set ruby_version " "(rbenv version-name)
-    if [ $ruby_version = " 2.1.5" ]
+    if [ $ruby_version = " 2.2.0" ]
       set ruby_version ""
     end
   end
